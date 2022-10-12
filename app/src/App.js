@@ -1,27 +1,37 @@
-import React, { useEffect, useState } from 'react';
+import {useState, useEffect} from 'react';
 import axios from 'axios';
 
 
 
-async function App() {
+function App() {
     
-    const [ data, setData ] = React.useState();
+    const [ data, setData ] = useState([]);
     
     const url = 'https://astute-baton-362318.ue.r.appspot.com/api/json/';
 
-    React.useEffect(() => {
-        axios.get(url).then((response) => {
-            setData(response.data);
-        });
+    // useEffect(() => {
+    //     axios.get(url).then((resp) => {
+    //         setData(resp.data);
+    //     });
+    // }, []);
+    
+    useEffect(() => {
+        async function getData() {
+            const resp = await axios.get(url);
+            setData(resp.data);
+        }
+        getData();
     }, []);
-    console.log(setData.data)
-
-    if (!data) return null;
+console.log(data);
+    if (data.length === 0) {
+        return null
+    };
 
     return (
         <>
-            {/* <h2>{data.title}</h2>
-            <p>{data.description}</p> */}
+            <h1>{data[50].title}</h1>
+            <h2>${data[50].price}</h2>
+            <p>{data[50].description}</p>
         </>
     )
 }
