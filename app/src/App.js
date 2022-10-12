@@ -1,6 +1,6 @@
 import {useState, useEffect} from 'react';
 import axios from 'axios';
-
+import Card from './components/Card';
 
 
 function App() {
@@ -29,9 +29,7 @@ console.log(data);
 
     return (
         <>
-            <h1>{data[50].title}</h1>
-            <h2>${data[50].price}</h2>
-            <p>{data[50].description}</p>
+            <Card title={data.title} price={data.price} description={data.description}/>
         </>
     )
 }
