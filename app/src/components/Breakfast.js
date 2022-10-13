@@ -1,10 +1,8 @@
 
-
-function Lunch(props) {
-    let lunchArr = props.fullMenu.filter(item => item.category.title === 'Lunch')
-    let lunchItems = lunchArr.map((item) =>
-    // console.log(lunchArr);
-    <div className="col-sm-6 col-lg-4">
+function Breakfast(props) {
+    let bkfastArr = props.fullMenu.filter(item => item.category.title === 'Breakfast')
+    let bkfastItems = bkfastArr.map((item) =>
+            <div className="col-sm-6 col-lg-4">
                 <div className="card border border-dark h-100">
                     <div className="card-body">
                         <h5 className="card-title">{item.title}</h5>
@@ -15,13 +13,14 @@ function Lunch(props) {
             </div>
     )
     return(
-        <div className="container">
-            <div className="row">
-                {lunchItems}
+            <div className="container">
+                <div className="row">
+                    {bkfastItems}
+                </div>
             </div>
-        </div>
     )
 }
 
 
-export default Lunch
+export default Breakfast
+

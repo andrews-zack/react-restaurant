@@ -5,8 +5,9 @@ import Home from './components/Home';
 import Appetizers from './components/Appetizers'
 import Lunch from './components/Lunch'
 import Dinner from './components/Dinner'
-
-let fullMenu = [];
+import Breakfast from './components/Breakfast';
+import Dessert from './components/Dessert';
+import Sides from './components/Sides';
 
 function App() {
     
@@ -32,15 +33,17 @@ function App() {
         )
     };
 
-fullMenu = data;
 
     return (
         <>
             <Header handleClick={setPage}/>
             {page === 'Home'&& <Home />}
-            {page === 'Appetizers' && <Appetizers fullMenu={fullMenu}/>}
-            {page === 'Lunch' && <Lunch fullMenu={fullMenu}/>}
-            {page === 'Dinner' && <Dinner fullMenu={fullMenu}/>}
+            {page === 'Appetizers' && <Appetizers fullMenu={data}/>}
+            {page === 'Lunch' && <Lunch fullMenu={data}/>}
+            {page === 'Dinner' && <Dinner fullMenu={data}/>}
+            {page === 'Breakfast' && <Breakfast fullMenu={data}/>}
+            {page === 'Dessert' && <Dessert fullMenu={data}/>}
+            {page === 'Sides' && <Sides fullMenu={data}/>}
         </>
     )
 }
