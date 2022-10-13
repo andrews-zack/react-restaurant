@@ -1,17 +1,21 @@
 
 
 function Appetizers(props) {
-<>
-    <div className="col-sm-6 col-lg-4">
-        <div className="card border border-dark">
-            <div className="card-body">
-                <h5 className="card-title">{props.title}</h5>
-                <h6 className="card-subtitle mb-2 text-muted">{props.price}</h6>
-                <p className="card-text">{props.description}</p>
+    let appArr = props.fullMenu.filter(item => item.category.title === 'Appetizer')
+    console.log(appArr);
+    return(
+        <>
+            <div className="col-sm-6 col-lg-4">
+                <div className="card border border-dark">
+                    <div className="card-body">
+                        <h5 className="card-title">{props.fullMenu[20].title}</h5>
+                        <h6 className="card-subtitle mb-2 text-muted">{props.fullMenu[20].price}</h6>
+                        <p className="card-text">{props.fullMenu[20].description}</p>
+                    </div>
+                </div>
             </div>
-        </div>
-    </div>
-</>
+        </>
+    )
 }
 
 

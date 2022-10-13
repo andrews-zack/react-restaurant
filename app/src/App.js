@@ -4,6 +4,7 @@ import Header from './components/Header'
 import Home from './components/Home';
 import Appetizers from './components/Appetizers'
 import Lunch from './components/Lunch'
+import Dinner from './components/Dinner'
 
 let fullMenu = [];
 
@@ -32,14 +33,14 @@ function App() {
     };
 
 fullMenu = data;
-console.log(fullMenu);
 
     return (
         <>
             <Header handleClick={setPage}/>
             {page === 'Home'&& <Home />}
-            {page === 'Appetizers' && <Appetizers fullMenu="fullMenu"/>}
-            {page === 'Lunch' && <Lunch fullMenu="fullMenu"/>}
+            {page === 'Appetizers' && <Appetizers fullMenu={fullMenu}/>}
+            {page === 'Lunch' && <Lunch fullMenu={fullMenu}/>}
+            {page === 'Dinner' && <Dinner fullMenu={fullMenu}/>}
         </>
     )
 }
