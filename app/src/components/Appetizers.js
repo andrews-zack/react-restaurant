@@ -2,19 +2,23 @@
 
 function Appetizers(props) {
     let appArr = props.fullMenu.filter(item => item.category.title === 'Appetizer')
-    console.log(appArr);
-    return(
-        <>
+    let appItems = appArr.map((item) =>
             <div className="col-sm-6 col-lg-4">
-                <div className="card border border-dark">
+                <div className="card border border-dark h-100">
                     <div className="card-body">
-                        <h5 className="card-title">{props.fullMenu[20].title}</h5>
-                        <h6 className="card-subtitle mb-2 text-muted">{props.fullMenu[20].price}</h6>
-                        <p className="card-text">{props.fullMenu[20].description}</p>
+                        <h5 className="card-title">{item.title}</h5>
+                        <h6 className="card-subtitle mb-2 text-muted">{item.price}</h6>
+                        <p className="card-text">{item.description}</p>
                     </div>
                 </div>
             </div>
-        </>
+        )
+    return(
+        <div className="container">
+            <div className="row">
+                {appItems}
+            </div>
+        </div>
     )
 }
 
