@@ -1,8 +1,10 @@
 import {useState, useEffect} from 'react';
 import axios from 'axios';
-import Card from './components/Card';
-// import Body from './components/Body';
+import Header from './components/Header'
+import Appetizers from './components/Appetizers'
+import Lunch from './components/Lunch'
 
+let fullMenu = [];
 
 function App() {
     
@@ -23,14 +25,19 @@ function App() {
         }
         getData();
     }, []);
-console.log(data);
+// console.log(data);
     if (data.length === 0) {
-        return null
+        return <Header />
     };
+
+fullMenu = data;
+console.log(fullMenu);
 
     return (
         <>
-            {data.map((d) => <Card key={d.id} title={d.title} price={d.price} description={d.description}/>)}
+            <Header />
+            <Appetizers fullMenu="data"/>
+            <Lunch />
         </>
     )
 }
