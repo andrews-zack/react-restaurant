@@ -29,7 +29,7 @@ console.log(data);
 
     return (
         <>
-            <Card title={data.title} price={data.price} description={data.description}/>
+            {data.map((d) => <Card key={d.id} title={d.title} price={d.price} description={d.description}/>)}
         </>
     )
 }
