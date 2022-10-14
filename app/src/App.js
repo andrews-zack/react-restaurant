@@ -8,6 +8,7 @@ import Dinner from './components/Dinner'
 import Breakfast from './components/Breakfast';
 import Dessert from './components/Dessert';
 import Sides from './components/Sides';
+import './css/App.css'
 
 function App() {
     
@@ -23,7 +24,7 @@ function App() {
         }
         getData();
     }, []);
-// console.log(data);
+
     if (data.length === 0) {
         return (
             <>
@@ -33,6 +34,9 @@ function App() {
         )
     };
 
+    // const shuffler = (filteredArr) => {
+    //     (filteredArr.sort(() => 0.5 - Math.random())).slice(0,14);
+    // }
 
     return (
         <>
