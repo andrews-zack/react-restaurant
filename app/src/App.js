@@ -8,7 +8,7 @@ import Dinner from './components/Dinner'
 import Breakfast from './components/Breakfast';
 import Dessert from './components/Dessert';
 import Sides from './components/Sides';
-import './App.css'
+import './css/App.css'
 
 function App() {
     
