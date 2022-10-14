@@ -1,0 +1,15 @@
+body {
+    background-image: url('./img/paper.jpg');
+}
+
+#header {
+    background-color: rgba(255, 255, 255, 1)!important;
+}
+
+#crad {
+    background-color: rgba(255, 255, 255, 0)!important;
+}
+
+/* #cont {
+    background-color: rgba(255, 255, 255, 0')!important;
+} */
