@@ -1,27 +1,56 @@
-import React, { useEffect, useState } from 'react';
+import {useState, useEffect} from 'react';
 import axios from 'axios';
+import Header from './components/Header'
+import Home from './components/Home';
+import Appetizers from './components/Appetizers'
+import Lunch from './components/Lunch'
+import Dinner from './components/Dinner'
+import Breakfast from './components/Breakfast';
+import Dessert from './components/Dessert';
+import Sides from './components/Sides';
+import Footer from './components/Footer'
+import './css/App.css'
 
-
-
-async function App() {
+function App() {
     
-    const [ data, setData ] = React.useState();
+    const [ data, setData ] = useState([]);
+    const [ page, setPage ] = useState('Home');
     
     const url = 'https://astute-baton-362318.ue.r.appspot.com/api/json/';
-
-    React.useEffect(() => {
-        axios.get(url).then((response) => {
-            setData(response.data);
-        });
+    
+    useEffect(() => {
+        async function getData() {
+            const resp = await axios.get(url);
+            setData(resp.data);
+        }
+        getData();
     }, []);
-    console.log(setData.data)
 
-    if (!data) return null;
+    if (data.length === 0) {
+        return (
+            <>
+                <Header />
+                <Home />
+                <Footer />
+            </>
+        )
+    };
+
+    // const shuffler = (filteredArr) => {
+    //     (filteredArr.sort(() => 0.5 - Math.random())).slice(0,14);
+    // }
 
     return (
         <>
-            {/* <h2>{data.title}</h2>
-            <p>{data.description}</p> */}
+            <Header handleClick={setPage}/>
+            {page === 'Home'&& <Home />}
+            {page === 'Appetizers' && <Appetizers fullMenu={data}/>}
+            {page === 'Lunch' && <Lunch fullMenu={data}/>}
+            {page === 'Dinner' && <Dinner fullMenu={data}/>}
+            {page === 'Breakfast' && <Breakfast fullMenu={data}/>}
+            {page === 'Dessert' && <Dessert fullMenu={data}/>}
+            {page === 'Sides' && <Sides fullMenu={data}/>}
+            <Footer />
         </>
     )
 }
