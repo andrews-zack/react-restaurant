@@ -16,7 +16,7 @@ function Dinner(props) {
             </div>
     )
     return(
-            <div className="container mt-3 pt-3" id='cont'>
+            <div className="container mt-3 pt-3" id="cont">
                 <div className="row">
                     {dinnerItems}
                 </div>

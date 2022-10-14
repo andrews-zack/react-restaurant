@@ -29,3 +29,13 @@ body {
     font-family: 'architextregular';
 }
 
+#homeimg {
+    background-image: cover;
+    background-repeat: no-repeat;
+    height: 75vh;
+}
+
+#homelogo {
+    height: 45vh;
+}
+

@@ -13,7 +13,7 @@ function Sides(props) {
             </div>
     )
     return(
-            <div className="container mt-3 pt-3">
+            <div className="container mt-3 pt-3" id="cont">
                 <div className="row">
                     {sidesItems}
                 </div>
