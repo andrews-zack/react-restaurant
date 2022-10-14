@@ -2,8 +2,9 @@
 
 function Dinner(props) {
     let dinnerArr = props.fullMenu.filter(item => item.category.title === 'Dinner')
-    let dinnerItems = dinnerArr.map((item) =>
-            <div className="col-sm-6 col-lg-4">
+    let shuffledArr = (dinnerArr.sort(() => 0.5 - Math.random())).slice(0,14);
+    let dinnerItems = shuffledArr.map((item) =>
+            <div className="col-sm-6 col-lg-6">
                 <div className="card border border-dark h-100">
                     <div className="card-body">
                         <h5 className="card-title">{item.title}</h5>

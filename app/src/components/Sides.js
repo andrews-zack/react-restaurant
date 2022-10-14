@@ -2,7 +2,7 @@
 function Sides(props) {
     let sidesArr = props.fullMenu.filter(item => item.category.title === 'Side')
     let sidesItems = sidesArr.map((item) =>
-            <div className="col-sm-6 col-lg-4">
+            <div className="col-sm-6 col-lg-6">
                 <div className="card border border-dark h-100">
                     <div className="card-body">
                         <h5 className="card-title">{item.title}</h5>

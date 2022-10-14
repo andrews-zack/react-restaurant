@@ -4,9 +4,9 @@
 function Header(props) {
     return(
         <>
-            <header className="d-flex justify-content-center py-3 h-25">
+            <header className="d-flex align-items-center py-3 h-25">
+                <img src={require('../img/logo.png')} onClick={() => props.handleClick('Home')} alt='logo' style= {{height: '75px', width: '75px'}} className='text-center'></img>
                 <ul className="nav nav-pills">
-                    <img src={require('../img/logo.png')} onClick={() => props.handleClick('Home')} alt='logo' style= {{height: '75px', width: '75px'}}></img>
                     <li className="nav-item"><button onClick={() => props.handleClick('Appetizers')} className="nav-link">Appetizers</button></li>
                     <li className="nav-item"><button onClick={() => props.handleClick('Lunch')} className="nav-link">Lunch</button></li>
                     <li className="nav-item"><button onClick={() => props.handleClick('Dinner')} className="nav-link">Dinner</button></li>

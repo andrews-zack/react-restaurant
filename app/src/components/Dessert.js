@@ -2,7 +2,7 @@
 function Dessert(props) {
     let dessertArr = props.fullMenu.filter(item => item.category.title === 'Dessert')
     let dessertItems = dessertArr.map((item) =>
-            <div className="col-sm-6 col-lg-4">
+            <div className="col-sm-6 col-lg-6">
                 <div className="card border border-dark h-100">
                     <div className="card-body">
                         <h5 className="card-title">{item.title}</h5>
