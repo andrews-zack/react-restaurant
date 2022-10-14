@@ -8,6 +8,7 @@ import Dinner from './components/Dinner'
 import Breakfast from './components/Breakfast';
 import Dessert from './components/Dessert';
 import Sides from './components/Sides';
+import Footer from './components/Footer'
 import './css/App.css'
 
 function App() {
@@ -30,6 +31,7 @@ function App() {
             <>
                 <Header />
                 <Home />
+                <Footer />
             </>
         )
     };
@@ -48,6 +50,7 @@ function App() {
             {page === 'Breakfast' && <Breakfast fullMenu={data}/>}
             {page === 'Dessert' && <Dessert fullMenu={data}/>}
             {page === 'Sides' && <Sides fullMenu={data}/>}
+            <Footer />
         </>
     )
 }
