@@ -2,7 +2,7 @@
 function Footer() {
     return(
         <>
-            <div className="pb-1" id="footer">
+            <div className="pb-1 fixed-bottom" id="footer">
                 <div className="container-fluid">
                     <footer className="h-auto">
                         <ul className="justify-items-center border-bottom list-unstyled pt-2">
