@@ -16,7 +16,7 @@ function App() {
     const [ data, setData ] = useState([]);
     const [ page, setPage ] = useState('Home');
     
-    const url = 'https://astute-baton-362318.ue.r.appspot.com/api/json/';
+    const url = 'https://8000-andrewszack-backendbist-y5p6npi7sr0.ws-us75.gitpod.io/full_menu/';
     
     useEffect(() => {
         async function getData() {
@@ -25,7 +25,7 @@ function App() {
         }
         getData();
     }, []);
-
+    console.log(data);
     if (data.length === 0) {
         return (
             <>
