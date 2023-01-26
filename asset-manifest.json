@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/static/css/main.d7c9fcb4.css",
+    "main.js": "/static/js/main.b6bd135c.js",
+    "static/media/paper.jpg": "/static/media/paper.34bf00aac245082484ba.jpg",
+    "static/media/restaurant.jpeg": "/static/media/restaurant.2ba9a81e3a8ee63e5429.jpeg",
+    "static/media/architex-webfont.woff": "/static/media/architex-webfont.af3adba9f7a3031be227.woff",
+    "static/media/architex-webfont.woff2": "/static/media/architex-webfont.8f3c3fa3996f76fc874d.woff2",
+    "static/media/coffee-cup.png": "/static/media/coffee-cup.939863c35a9a8e17e895.png",
+    "static/media/logo.png": "/static/media/logo.33acff9ba9d6818ff0da.png",
+    "index.html": "/index.html",
+    "main.d7c9fcb4.css.map": "/static/css/main.d7c9fcb4.css.map",
+    "main.b6bd135c.js.map": "/static/js/main.b6bd135c.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d7c9fcb4.css",
+    "static/js/main.b6bd135c.js"
+  ]
+}
